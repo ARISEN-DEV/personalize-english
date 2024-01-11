@@ -1,0 +1,109 @@
+---
+import { Image } from "astro:assets";
+
+import imagen from "../../assets/img1.jpg";
+import imagen2 from "../../assets/img2.jpg";
+import imagen3 from "../../assets/img3.jpg";
+import imagen4 from "../../assets/img4.jpg";
+import imagen5 from "../../assets/img5.jpg";
+import imagen6 from "../../assets/img6.jpg";
+import imagen7 from "../../assets/img7.jpg";
+import imagen8 from "../../assets/img8.jpg";
+import imagen9 from "../../assets/img9.jpg";
+---
+
+<main class="mt-20 py-10" id="carrousel">
+  <h2 class="text-neutral-100 text-6xl text-center font">
+    Nuestras instalaciones
+  </h2>
+  <section class="carrousel p-10 flex flex-nowrap overflow-x-auto gap-5">
+    <Image
+      src={imagen}
+      alt="Salones de Personalize English"
+      width={320}
+      height={320}
+      class="w-80 h-80 hover:scale-105 duration-500 rounded-md ring-1 ring-gray-400"
+      format="webp"
+    />
+    <Image
+      src={imagen2}
+      alt="Salones de Personalize English"
+      width={320}
+      height={320}
+      class="w-80 h-80 hover:scale-105 duration-500 rounded-md ring-1 ring-gray-400"
+      format="webp"
+    />
+    <Image
+      src={imagen3}
+      alt="Salones de Personalize English"
+      width={320}
+      height={320}
+      class="w-80 h-80 hover:scale-105 duration-500 rounded-md ring-1 ring-gray-400"
+      format="webp"
+    />
+    <Image
+      src={imagen4}
+      alt="Salones de Personalize English"
+      width={320}
+      height={320}
+      class="w-80 h-80 hover:scale-105 duration-500 rounded-md ring-1 ring-gray-400"
+      format="webp"
+    />
+    <Image
+      src={imagen5}
+      alt="Salones de Personalize English"
+      width={320}
+      height={320}
+      class="w-80 h-80 hover:scale-105 duration-500 rounded-md ring-1 ring-gray-400"
+      format="webp"
+    />
+    <Image
+      src={imagen6}
+      alt="Salones de Personalize English"
+      width={320}
+      height={320}
+      class="w-80 h-80 hover:scale-105 duration-500 rounded-md ring-1 ring-gray-400"
+      format="webp"
+    />
+    <Image
+      src={imagen7}
+      alt="Salones de Personalize English"
+      width={320}
+      height={320}
+      class="w-80 h-80 hover:scale-105 duration-500 rounded-md ring-1 ring-gray-400"
+      format="webp"
+    />
+    <Image
+      src={imagen8}
+      alt="Salones de Personalize English"
+      width={320}
+      height={320}
+      class="w-80 h-80 hover:scale-105 duration-500 rounded-md ring-1 ring-gray-400"
+      format="webp"
+    />
+    <Image
+      src={imagen9}
+      alt="Salones de Personalize English"
+      width={320}
+      height={320}
+      class="w-80 h-80 hover:scale-105 duration-500 rounded-md ring-1 ring-gray-400"
+      format="webp"
+    />
+  </section>
+</main>
+<style>
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .carrousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .carrousel {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .font {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+</style>

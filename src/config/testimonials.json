@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Valentín B",
+        "testimonial": "Muy buen instituto, la mejor profe se encuentra aquí",
+        "src": "../assets/classroom.jpg"
+    },
+    {
+        "name": "Sebastian P",
+        "testimonial": "Tremendo lugar donde pude aprender un idioma que me costaba mucho",
+        "src": "../assets/classroom.jpg"
+    },
+    {
+        "name": "Rocio R",
+        "testimonial": "Di el PET y no me arrepiento de nada, espero que el FIRST sea fácil",
+        "src": "../assets/classroom.jpg"
+    },
+    {
+        "name": "Renzo F",
+        "testimonial": "Me encantó haber estudiado en esta academia que me preparo al mundo",
+        "src": "../assets/classroom.jpg"
+    }
+]

@@ -1,0 +1,60 @@
+<form
+    class="w-full my-20 max-w-md lg:max-w-lg m-auto space-x-3"
+    id="contact"
+    target="_blank"
+    action="https://formsubmit.co/emailDePersonalize.com"
+    method="POST"
+>
+    <div
+        class="w-full max-w-2xl px-5 py-10 m-auto mt-10 bg-darkgreen shadow-2xl "
+    >
+        <div class="mb-6 text-3xl text-center font-semibold text-gray-100">
+            Comunícate con nosotros
+        </div>
+        <div class="grid max-w-xl grid-cols-2 gap-4 m-auto">
+            <div class="col-span-2 lg:col-span-1">
+                <div class="relative">
+                    <input
+                        type="text"
+                        id="contact-form-name"
+                        class="rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-neutral-100 text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent"
+                        placeholder="Nombre"
+                        required
+                    />
+                </div>
+            </div>
+            <div class="col-span-2 lg:col-span-1">
+                <div class="relative">
+                    <input
+                        type="email"
+                        id="contact-form-email"
+                        class="rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-neutral-100 text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent"
+                        placeholder="Email"
+                        required
+                    />
+                </div>
+            </div>
+            <div class="col-span-2">
+                <textarea
+                    class="flex-1 w-full px-4 py-2 text-base text-gray-700 bg-neutral-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-800 placeholder-gray-400"
+                    id="comment"
+                    name="comment"
+                    rows="5"
+                    cols="40"
+                    required
+                    spellcheck="true"
+                    placeholder="Hace tu consulta acá"
+                >
+                </textarea>
+            </div>
+            <div class="col-span-2 text-right">
+                <button
+                    type="submit"
+                    class="px-4 py-2 text-neutral-100 uppercase bg-red-600 border-2 border-transparent rounded-lg text-md hover:bg-red-700 hover: duration-300 ease-out shadow-xl font-semibold w-full"
+                >
+                    Enviar
+                </button>
+            </div>
+        </div>
+    </div>
+</form>

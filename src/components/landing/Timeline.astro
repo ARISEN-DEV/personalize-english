@@ -1,0 +1,105 @@
+---
+
+---
+
+<main class="container mx-auto w-full lg:my-10">
+  <div class="relative wrap overflow-hidden p-10 h-full">
+    <div
+      class="border-2-2 absolute border-greige h-full border"
+      style="left: 50%"
+    >
+    </div>
+    <!-- right timeline -->
+    <section
+      class="mb-8 flex justify-between items-center w-full right-timeline"
+    >
+      <div class="order-1 w-5/12"></div>
+      <div
+        class="z-20 flex items-center order-1 bg-green-900 border-2 border-greige shadow-xl w-8 h-8 rounded-full"
+      >
+      </div>
+      <div class="order-1 bg-darkgreen rounded-lg shadow-xl w-5/12 px-6 py-4">
+        <h3 class="mb-3 font-semibold text-white text-2xl">Fundamentos Sólidos en Nuestros Cursos Básicos</h3>
+        <p class="text-base font-medium leading-snug tracking-wide  text-neutral-100">
+          Sumérgete en los conceptos esenciales del inglés con nuestros cursos básicos. Desde la gramática hasta el vocabulario, te ofrecemos una introducción completa para construir una base sólida.
+        </p>
+      </div>
+    </section>
+
+    <!-- left timeline -->
+    <section
+      class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
+    >
+      <div class="order-1 w-5/12"></div>
+      <div
+        class="z-20 flex items-center order-1 bg-green-900 border-2 border-greige shadow-xl w-8 h-8 rounded-full"
+      >
+      </div>
+      <div
+        class="order-1 bg-green-800 rounded-lg shadow-xl w-5/12 px-6 py-4"
+      >
+        <h3 class="mb-3 font-semibold text-white text-2xl">Avanza con Nuestros Cursos Intermedios</h3>
+        <p class="text-base font-medium leading-snug t racking-wide text-white">
+          Desarrolla confianza en tu comunicación con nuestros cursos intermedios. Perfecciona tu gramática, amplía tu vocabulario y mejora tus habilidades conversacionales para manejarte eficientemente en situaciones cotidianas.
+        </p>
+      </div>
+    </section>
+
+    <!-- right timeline -->
+    <section
+      class="mb-8 flex justify-between items-center w-full right-timeline"
+    >
+      <div class="order-1 w-5/12"></div>
+      <div
+        class="z-20 flex items-center order-1 bg-green-900 border-2 border-greige shadow-xl w-8 h-8 rounded-full"
+      >
+      </div>
+      <div class="order-1 bg-darkgreen rounded-lg shadow-xl w-5/12 px-6 py-4">
+        <h3 class="mb-3 font-semibold text-white text-2xl">Domina el Inglés Avanzado</h3>
+        <p class="text-base font-medium leading-snug tracking-wide  text-neutral-100">
+          Da el siguiente paso hacia la fluidez con nuestros cursos avanzados. Trabaja en sutilezas lingüísticas, comprensión avanzada y participa en discusiones más complejas para alcanzar un nivel de competencia más alto.
+        </p>
+      </div>
+    </section>
+
+    <!-- left timeline -->
+    <section
+      class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
+    >
+      <div class="order-1 w-5/12"></div>
+      <div
+        class="z-20 flex items-center order-1 bg-green-900 border-2 border-greige shadow-xl w-8 h-8 rounded-full"
+      >
+      </div>
+      <div
+        class="order-1 bg-green-800 rounded-lg shadow-xl w-5/12 px-6 py-4"
+      >
+        <h3 class="mb-3 font-semibold text-white text-2xl">Preparación Exitosa para Exámenes Internacionales</h3>
+        <p class="text-base font-medium leading-snug t racking-wide text-white">
+          Nuestra programación de preparación para exámenes te equipa con las habilidades necesarias para superar tu primer examen internacional. Ya sea de Cambridge, Michigan u otro, te preparamos para destacar y abrir puertas a nuevas oportunidades educativas y profesionales. ¡Tu éxito internacional comienza con nosotros!
+        </p>
+      </div>
+    </section>
+  </div>
+</main>
+
+<style>
+  main section {
+    animation: reveal ease-in-out both;
+    animation-timeline: scroll(root);
+    animation-range: entry 10% cover 35%;
+  }
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      translate: 0 50px;
+      scale: 0.5;
+    }
+    to {
+      opacity: 1;
+      translate: 0 0;
+      scale: 1;
+    }
+  }
+</style>

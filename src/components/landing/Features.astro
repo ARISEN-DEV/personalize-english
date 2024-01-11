@@ -1,0 +1,26 @@
+---
+import features from "../../config/features.json";
+import AcademyCapIcon from '../icons/academyCap.astro'
+---
+
+<div
+    class="flex-wrap items-center justify-center gap-8 text-center sm:flex py-10 m-20 rounded-xl"
+>
+    {
+        features.map((feature) => (
+            <div class="w-full px-4 py-4 mt-6 rounded-xl sm:w-1/2 md:w-1/2 lg:w-1/4 even:lg:mt-24 bg-darkgreen border-4 border-greige shadow-xl ">
+                <div class="flex-shrink-0">
+                    <div class="flex items-center justify-center w-12 h-12 mx-auto text-white bg-lightergreen rounded-md">
+                        <AcademyCapIcon/>
+                    </div>
+                </div>
+                <h3 class="py-4 text-3xl font-semibold text-neutral-100 sm:text-xl">
+                    {feature.title}
+                </h3>
+                <p class="py-4 text-neutral-100 text-xl">
+                    {feature.description}
+                </p>
+            </div>
+        ))
+    }
+</div>
