@@ -1,40 +1,583 @@
-<!DOCTYPE html><html lang="en" class="scroll-smooth" data-astro-cid-w4p2pmha> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v4.0.3"><meta name="description"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"><link rel="icon" type="image/svg+xml" href="logo.png"><title>Personalize English | Home</title><link rel="stylesheet" href="assets/index.qJb6eq6w.css" />
-<style>.font[data-astro-cid-7vszemnk]{font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif}.slideshow[data-astro-cid-tdmieydy]{display:none}.fade[data-astro-cid-tdmieydy]{animation-name:fade;animation-duration:2s}@keyframes fade{0%{opacity:.3}to{opacity:1}}main[data-astro-cid-z44pupvl] section[data-astro-cid-z44pupvl]{animation:reveal ease-in-out both;animation-timeline:scroll(root);animation-range:entry 10% cover 35%}@keyframes reveal{0%{opacity:0;translate:0 50px;scale:.5}to{opacity:1;translate:0 0;scale:1}}.carrousel[data-astro-cid-n3tzmrzb]::-webkit-scrollbar{display:none}.carrousel[data-astro-cid-n3tzmrzb]{-ms-overflow-style:none;scrollbar-width:none}.font[data-astro-cid-n3tzmrzb]{font-family:Verdana,Geneva,Tahoma,sans-serif}
-</style><script type="module">const c=document.querySelector("#landing-header"),a={root:null,rootMargin:"0px",threshold:.9},d=new IntersectionObserver(e=>{e.forEach(t=>{const{isIntersecting:s}=t;if(s){const n=t.target.getAttribute("data-header-color");c.style.color=n}})},a),y=document.querySelectorAll(".landing-section");y.forEach(e=>d.observe(e));const h=document.querySelectorAll("#landing-header li"),l=document.querySelector("#menu-backdrop");h.forEach(e=>{e.addEventListener("mouseenter",()=>{const{left:t,top:s,width:n,height:i}=e.getBoundingClientRect();l.style.setProperty("--left",`${t}px`),l.style.setProperty("--top",`${s}px`),l.style.setProperty("--width",`${n}px`),l.style.setProperty("--height",`${i}px`),l.style.opacity="1",l.style.visibility="visible"}),e.addEventListener("mouseleave",()=>{l.style.opacity="0",l.style.visibility="hidden"})});let o=0;r();function r(){let e,t=document.getElementsByClassName("slideshow"),s=document.getElementsByClassName("image");for(e=0;e<t.length;e++)t[e].style.display="none";for(o++,o>t.length&&(o=1),e=0;e<s.length;e++)s[e].className=s[e].className.replace(" active","");t[o-1].style.display="block",s[o-1].className+=" active",setTimeout(r,2e3)}
-</script></head> <body class="bg-lightgreen h-screen relative font" data-astro-cid-w4p2pmha>  <header id="landing-header" class="py-3 px-10 flex items-center fixed top-0 w-full justify-between z-40 text-neutral-800"> <div class="flex flex-grow basis-0"> <a href="./"><img src="/assets/logo.ltGVkLVQ_Zb58wV.webp" alt="Logo de Personalize English" class="duration-500 md:inline" width="239" height="128" loading="lazy" decoding="async"></a> </div> <nav class="block"> <ul class="flex text-sm text-white [&>li>a]:transition-colors [&>li>a]:duration-500 [&>li>a]:text-current [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2"> <li><a href="#carrousel">Salones</a></li> <li><a href="#aboutus">Sobre nosotros</a></li> <li><a href="#contact">Contacto</a></li> </ul> </nav> <div id="menu-backdrop" class="
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" data-astro-cid-w4p2pmha>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="generator" content="Astro v4.0.3">
+  <meta name="description">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="icon" type="image/svg+xml" href="logo.png">
+  <title>Personalize English | Home</title>
+  <link rel="stylesheet" href=assets/index.qJb6eq6w.css" />
+  <style>
+    .font[data-astro-cid-7vszemnk] {
+      font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif
+    }
+
+    .slideshow[data-astro-cid-tdmieydy] {
+      display: none
+    }
+
+    .fade[data-astro-cid-tdmieydy] {
+      animation-name: fade;
+      animation-duration: 2s
+    }
+
+    @keyframes fade {
+      0% {
+        opacity: .3
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    main[data-astro-cid-z44pupvl] section[data-astro-cid-z44pupvl] {
+      animation: reveal ease-in-out both;
+      animation-timeline: scroll(root);
+      animation-range: entry 10% cover 35%
+    }
+
+    @keyframes reveal {
+      0% {
+        opacity: 0;
+        translate: 0 50px;
+        scale: .5
+      }
+
+      to {
+        opacity: 1;
+        translate: 0 0;
+        scale: 1
+      }
+    }
+
+    .carrousel[data-astro-cid-n3tzmrzb]::-webkit-scrollbar {
+      display: none
+    }
+
+    .carrousel[data-astro-cid-n3tzmrzb] {
+      -ms-overflow-style: none;
+      scrollbar-width: none
+    }
+
+    .font[data-astro-cid-n3tzmrzb] {
+      font-family: Verdana, Geneva, Tahoma, sans-serif
+    }
+  </style>
+  <script type="module">const c = document.querySelector("#landing-header"), a = { root: null, rootMargin: "0px", threshold: .9 }, d = new IntersectionObserver(e => { e.forEach(t => { const { isIntersecting: s } = t; if (s) { const n = t.target.getAttribute("data-header-color"); c.style.color = n } }) }, a), y = document.querySelectorAll(".landing-section"); y.forEach(e => d.observe(e)); const h = document.querySelectorAll("#landing-header li"), l = document.querySelector("#menu-backdrop"); h.forEach(e => { e.addEventListener("mouseenter", () => { const { left: t, top: s, width: n, height: i } = e.getBoundingClientRect(); l.style.setProperty("--left", `${t}px`), l.style.setProperty("--top", `${s}px`), l.style.setProperty("--width", `${n}px`), l.style.setProperty("--height", `${i}px`), l.style.opacity = "1", l.style.visibility = "visible" }), e.addEventListener("mouseleave", () => { l.style.opacity = "0", l.style.visibility = "hidden" }) }); let o = 0; r(); function r() { let e, t = document.getElementsByClassName("slideshow"), s = document.getElementsByClassName("image"); for (e = 0; e < t.length; e++)t[e].style.display = "none"; for (o++, o > t.length && (o = 1), e = 0; e < s.length; e++)s[e].className = s[e].className.replace(" active", ""); t[o - 1].style.display = "block", s[o - 1].className += " active", setTimeout(r, 2e3) }
+  </script>
+</head>
+
+<body class="bg-lightgreen h-screen relative font" data-astro-cid-w4p2pmha>
+  <header id="landing-header"
+    class="py-3 px-10 flex items-center fixed top-0 w-full justify-between z-40 text-neutral-800">
+    <div class="flex flex-grow basis-0"> <a href="./"><img src="assets/logo.ltGVkLVQ_Zb58wV.webp"
+          alt="Logo de Personalize English" class="duration-500 md:inline" width="239" height="128" loading="lazy"
+          decoding="async"></a> </div>
+    <nav class="block">
+      <ul
+        class="flex text-sm text-white [&>li>a]:transition-colors [&>li>a]:duration-500 [&>li>a]:text-current [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2">
+        <li><a href="#carrousel">Salones</a></li>
+        <li><a href="#aboutus">Sobre nosotros</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+    <div id="menu-backdrop" class="
       absolute bg-black/5 backdrop-blur-lg rounded
       translate-x-[var(--left)] translate-y-[var(--top)]
       left-0 top-0
       w-[var(--width)] h-[var(--height)]
       transition-all duration-500
       ease-in-out opacity-0 -z-40
-    "></div> </header>   <header data-astro-cid-7vszemnk> <img src="/assets/hero.r4OyZbOg_Z2eXqHD.webp" alt="Instituto Personalize English" class="m-auto absolute shadow-2xl h-screen lg:h-auto" data-astro-cid-7vszemnk width="1819" height="1024" loading="lazy" decoding="async"> </header> <section class="relative z-20 flex items-center overflow-hidden lg:h-screen from-darkgreen bg-gradient-to-t" data-astro-cid-7vszemnk> <div class="container relative flex pl-6 py-16 mx-auto" data-astro-cid-7vszemnk> <div class="relative z-20 flex flex-col sm:w-2/3 lg:w-2/5 animate__animated animate__fadeInLeft pt-20 select-none" data-astro-cid-7vszemnk> <h1 class="flex text-6xl font-black leading-none text-gray-900 uppercase lg:text-8xl italic" data-astro-cid-7vszemnk>
-Personal <span class="text-red-500" data-astro-cid-7vszemnk>i</span> ze
-</h1> <span class="md:text-6xl text-4xl font-black uppercase text-neutral-200" data-astro-cid-7vszemnk>tu mundo</span> <p class="text-xl text-neutral-200 pt-10 font-semibold font" data-astro-cid-7vszemnk>
-¡Reinventate! Estudiá un nuevo idioma, abrí las puertas
-                a nuevos horizontes y a todo lo que siempre deseaste.
-</p> <div class="flex mt-8 animate__animated animate__fadeIn animate__delay-1s" data-astro-cid-7vszemnk> <a href="#contact" class="px-4 py-2 mr-4 text-neutral-100 uppercase bg-red-600 border-2 border-transparent rounded-lg text-md hover:bg-red-700 hover: duration-300 ease-out shadow-xl" data-astro-cid-7vszemnk>
-Comenzar
-</a> <a href="#aboutus" class="px-4 py-2 uppercase bg-transparent border-2 rounded-lg hover:bg-red-700 text-md text-white duration-300 ease-out shadow-xl" data-astro-cid-7vszemnk>
-Leer mas
-</a> </div> </div> </div> </section>  <div class="relative p-20 pt-40 bg-gradient-to-b from-darkgreen to-lightgreen" id="aboutus"> <div class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-12 lg:items-center"> <div class="lg:col-start-2 md:p-20 wrap pb-16"> <h4 class="text-3xl font-extrabold leading-8 tracking-tight text-gray-900 dark:text-white sm:leading-9 text-center md:text-left">
-Alcanzá todo eso que estás buscando
-</h4> <ul class="mt-10"> <li class="mt-10"> <div class="flex"> <div class="flex-shrink-0"> <div class="flex items-center justify-center w-12 h-12 text-white bg-lightergreen rounded-md border-2 border-greige shadow-xl"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"> <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"></path> </svg> </div> </div> <div class="ml-4"> <h5 class="font-semibold leading-6 text-white text-2xl"> Un Mejor Desempeño Laboral </h5> <p class=" text-lg mt-2  leading-6 text-gray-200"> El inglés no solo te abre puertas, sino que impulsa tu desempeño y desarrollo profesional. Abraza oportunidades que te lleven más alto en tu carrera. </p> </div> </div> </li> </ul><ul class="mt-10"> <li class="mt-10"> <div class="flex"> <div class="flex-shrink-0"> <div class="flex items-center justify-center w-12 h-12 text-white bg-lightergreen rounded-md border-2 border-greige shadow-xl"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"> <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"></path> </svg> </div> </div> <div class="ml-4"> <h5 class="font-semibold leading-6 text-white text-2xl"> Una Comunicación Sin Barreras </h5> <p class=" text-lg mt-2  leading-6 text-gray-200"> Hablar inglés te brinda la habilidad de comunicarte sin restricciones. Desde presentaciones empresariales hasta conexiones personales, el inglés te empodera para expresar ideas y construir relaciones de manera efectiva. </p> </div> </div> </li> </ul><ul class="mt-10"> <li class="mt-10"> <div class="flex"> <div class="flex-shrink-0"> <div class="flex items-center justify-center w-12 h-12 text-white bg-lightergreen rounded-md border-2 border-greige shadow-xl"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"> <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"></path> </svg> </div> </div> <div class="ml-4"> <h5 class="font-semibold leading-6 text-white text-2xl"> Mayor Crecimiento Personal y Confianza </h5> <p class=" text-lg mt-2  leading-6 text-gray-200"> Aprender inglés no solo es adquirir habilidades lingüísticas, sino también una herramienta para el crecimiento personal. La confianza que obtienes al expresarte en un idioma global te impulsa en todos los aspectos de la vida. </p> </div> </div> </li> </ul> <a href="#contact" class="px-4 py-2 absolute m-5 ml-16  text-neutral-100 uppercase bg-red-600 border-2 border-transparent rounded-lg text-md hover:bg-red-700 hover: duration-300 ease-out shadow-xl">
-Empezá ahora
-</a> </div> <section class="relative mt-10 m-auto lg:mt-0 max-w-lg " data-astro-cid-tdmieydy> <img src="/assets/classroom.HQ73DqxZ_Z10hDKG.webp" alt="clase de ingles" class="relative mx-auto rounded-3xl shadow-2xl duration-300 ease-out slideshow fade image border-2 border-darkgreen" data-astro-cid-tdmieydy width="500" height="750" loading="lazy" decoding="async"> <img src="/assets/classroom2.rLYWLSXi_ZB6u0g.webp" alt="clase de ingles" class="relative mx-auto rounded-3xl shadow-2xl duration-300 ease-out slideshow fade image border-2 border-darkgreen" data-astro-cid-tdmieydy width="500" height="750" loading="lazy" decoding="async"> <img src="/assets/classroom3.ElLg2_mJ_Z2bvF6D.webp" alt="clase de ingles" class="relative mx-auto rounded-3xl shadow-2xl duration-300 ease-out slideshow fade image border-2 border-darkgreen" data-astro-cid-tdmieydy width="500" height="750" loading="lazy" decoding="async"> <img src="/assets/classroom4.HDOe9c6U_Z2ihNkz.webp" alt="clase de ingles" class="relative mx-auto rounded-3xl shadow-2xl duration-300 ease-out slideshow fade image border-2 border-darkgreen" data-astro-cid-tdmieydy width="500" height="750" loading="lazy" decoding="async"> </section>   </div> </div> <main class="container mx-auto w-full lg:my-10" data-astro-cid-z44pupvl> <div class="relative wrap overflow-hidden p-10 h-full" data-astro-cid-z44pupvl> <div class="border-2-2 absolute border-greige h-full border" style="left: 50%" data-astro-cid-z44pupvl></div> <!-- right timeline --> <section class="mb-8 flex justify-between items-center w-full right-timeline" data-astro-cid-z44pupvl> <div class="order-1 w-5/12" data-astro-cid-z44pupvl></div> <div class="z-20 flex items-center order-1 bg-green-900 border-2 border-greige shadow-xl w-8 h-8 rounded-full" data-astro-cid-z44pupvl></div> <div class="order-1 bg-darkgreen rounded-lg shadow-xl w-5/12 px-6 py-4" data-astro-cid-z44pupvl> <h3 class="mb-3 font-semibold text-white text-2xl" data-astro-cid-z44pupvl>Fundamentos Sólidos en Nuestros Cursos Básicos</h3> <p class="text-base font-medium leading-snug tracking-wide  text-neutral-100" data-astro-cid-z44pupvl>
-Sumérgete en los conceptos esenciales del inglés con nuestros cursos básicos. Desde la gramática hasta el vocabulario, te ofrecemos una introducción completa para construir una base sólida.
-</p> </div> </section> <!-- left timeline --> <section class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline" data-astro-cid-z44pupvl> <div class="order-1 w-5/12" data-astro-cid-z44pupvl></div> <div class="z-20 flex items-center order-1 bg-green-900 border-2 border-greige shadow-xl w-8 h-8 rounded-full" data-astro-cid-z44pupvl></div> <div class="order-1 bg-green-800 rounded-lg shadow-xl w-5/12 px-6 py-4" data-astro-cid-z44pupvl> <h3 class="mb-3 font-semibold text-white text-2xl" data-astro-cid-z44pupvl>Avanza con Nuestros Cursos Intermedios</h3> <p class="text-base font-medium leading-snug t racking-wide text-white" data-astro-cid-z44pupvl>
-Desarrolla confianza en tu comunicación con nuestros cursos intermedios. Perfecciona tu gramática, amplía tu vocabulario y mejora tus habilidades conversacionales para manejarte eficientemente en situaciones cotidianas.
-</p> </div> </section> <!-- right timeline --> <section class="mb-8 flex justify-between items-center w-full right-timeline" data-astro-cid-z44pupvl> <div class="order-1 w-5/12" data-astro-cid-z44pupvl></div> <div class="z-20 flex items-center order-1 bg-green-900 border-2 border-greige shadow-xl w-8 h-8 rounded-full" data-astro-cid-z44pupvl></div> <div class="order-1 bg-darkgreen rounded-lg shadow-xl w-5/12 px-6 py-4" data-astro-cid-z44pupvl> <h3 class="mb-3 font-semibold text-white text-2xl" data-astro-cid-z44pupvl>Domina el Inglés Avanzado</h3> <p class="text-base font-medium leading-snug tracking-wide  text-neutral-100" data-astro-cid-z44pupvl>
-Da el siguiente paso hacia la fluidez con nuestros cursos avanzados. Trabaja en sutilezas lingüísticas, comprensión avanzada y participa en discusiones más complejas para alcanzar un nivel de competencia más alto.
-</p> </div> </section> <!-- left timeline --> <section class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline" data-astro-cid-z44pupvl> <div class="order-1 w-5/12" data-astro-cid-z44pupvl></div> <div class="z-20 flex items-center order-1 bg-green-900 border-2 border-greige shadow-xl w-8 h-8 rounded-full" data-astro-cid-z44pupvl></div> <div class="order-1 bg-green-800 rounded-lg shadow-xl w-5/12 px-6 py-4" data-astro-cid-z44pupvl> <h3 class="mb-3 font-semibold text-white text-2xl" data-astro-cid-z44pupvl>Preparación Exitosa para Exámenes Internacionales</h3> <p class="text-base font-medium leading-snug t racking-wide text-white" data-astro-cid-z44pupvl>
-Nuestra programación de preparación para exámenes te equipa con las habilidades necesarias para superar tu primer examen internacional. Ya sea de Cambridge, Michigan u otro, te preparamos para destacar y abrir puertas a nuevas oportunidades educativas y profesionales. ¡Tu éxito internacional comienza con nosotros!
-</p> </div> </section> </div> </main>  <div class="flex-wrap items-center justify-center gap-8 text-center sm:flex py-10 m-20 rounded-xl"> <div class="w-full px-4 py-4 mt-6 rounded-xl sm:w-1/2 md:w-1/2 lg:w-1/4 even:lg:mt-24 bg-darkgreen border-4 border-greige shadow-xl "> <div class="flex-shrink-0"> <div class="flex items-center justify-center w-12 h-12 mx-auto text-white bg-lightergreen rounded-md"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"> <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"></path> </svg> </div> </div> <h3 class="py-4 text-3xl font-semibold text-neutral-100 sm:text-xl"> Examen de nivelación GRATIS </h3> <p class="py-4 text-neutral-100 text-xl"> Descubre tu nivel de inglés con nuestra prueba gratuita. ¡Encuentra el curso perfecto que mejor se adapta a ti! </p> </div><div class="w-full px-4 py-4 mt-6 rounded-xl sm:w-1/2 md:w-1/2 lg:w-1/4 even:lg:mt-24 bg-darkgreen border-4 border-greige shadow-xl "> <div class="flex-shrink-0"> <div class="flex items-center justify-center w-12 h-12 mx-auto text-white bg-lightergreen rounded-md"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"> <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"></path> </svg> </div> </div> <h3 class="py-4 text-3xl font-semibold text-neutral-100 sm:text-xl"> Flexibilidad horaria </h3> <p class="py-4 text-neutral-100 text-xl"> Adapta las clases a tu vida ocupada y descubre la libertad de aprender cuando más te convenga. ¡Haz del inglés parte de tu vida cotidiana! </p> </div><div class="w-full px-4 py-4 mt-6 rounded-xl sm:w-1/2 md:w-1/2 lg:w-1/4 even:lg:mt-24 bg-darkgreen border-4 border-greige shadow-xl "> <div class="flex-shrink-0"> <div class="flex items-center justify-center w-12 h-12 mx-auto text-white bg-lightergreen rounded-md"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"> <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"></path> </svg> </div> </div> <h3 class="py-4 text-3xl font-semibold text-neutral-100 sm:text-xl"> Grupos reducidos </h3> <p class="py-4 text-neutral-100 text-xl"> Descubre el aprendizaje auténtico en clases íntimas. Aquí, no solo aprendes, ¡creas conexiones significativas en cada clase! </p> </div> </div> <main class="mt-20 py-10" id="carrousel" data-astro-cid-n3tzmrzb> <h2 class="text-neutral-100 text-6xl text-center font" data-astro-cid-n3tzmrzb>
-Nuestras instalaciones
-</h2> <section class="carrousel p-10 flex flex-nowrap overflow-x-auto gap-5" data-astro-cid-n3tzmrzb> <img src="/assets/img1.nBGHly7__Z1Ebk25.webp" alt="Salones de Personalize English" class="w-80 h-80 hover:scale-105 duration-500 rounded-md ring-1 ring-gray-400" data-astro-cid-n3tzmrzb width="320" height="320" loading="lazy" decoding="async"> <img src="/assets/img2.SU5wnaul_ZvuxTp.webp" alt="Salones de Personalize English" class="w-80 h-80 hover:scale-105 duration-500 rounded-md ring-1 ring-gray-400" data-astro-cid-n3tzmrzb width="320" height="320" loading="lazy" decoding="async"> <img src="/assets/img3.JkHo7wY5_Zkc8qd.webp" alt="Salones de Personalize English" class="w-80 h-80 hover:scale-105 duration-500 rounded-md ring-1 ring-gray-400" data-astro-cid-n3tzmrzb width="320" height="320" loading="lazy" decoding="async"> <img src="/assets/img4.zzCQC0Mo_Z26sgIT.webp" alt="Salones de Personalize English" class="w-80 h-80 hover:scale-105 duration-500 rounded-md ring-1 ring-gray-400" data-astro-cid-n3tzmrzb width="320" height="320" loading="lazy" decoding="async"> <img src="/assets/img5.8mfg2Ggm_Z2vGLOS.webp" alt="Salones de Personalize English" class="w-80 h-80 hover:scale-105 duration-500 rounded-md ring-1 ring-gray-400" data-astro-cid-n3tzmrzb width="320" height="320" loading="lazy" decoding="async"> <img src="/assets/img6.KDcUklPU_1SmOHd.webp" alt="Salones de Personalize English" class="w-80 h-80 hover:scale-105 duration-500 rounded-md ring-1 ring-gray-400" data-astro-cid-n3tzmrzb width="320" height="320" loading="lazy" decoding="async"> <img src="/assets/img7.azclph_x_ZEXqcJ.webp" alt="Salones de Personalize English" class="w-80 h-80 hover:scale-105 duration-500 rounded-md ring-1 ring-gray-400" data-astro-cid-n3tzmrzb width="320" height="320" loading="lazy" decoding="async"> <img src="/assets/img8.lVOGX5ZU_UYUPR.webp" alt="Salones de Personalize English" class="w-80 h-80 hover:scale-105 duration-500 rounded-md ring-1 ring-gray-400" data-astro-cid-n3tzmrzb width="320" height="320" loading="lazy" decoding="async"> <img src="/assets/img9.K0rf8_Y7_1HP5Sz.webp" alt="Salones de Personalize English" class="w-80 h-80 hover:scale-105 duration-500 rounded-md ring-1 ring-gray-400" data-astro-cid-n3tzmrzb width="320" height="320" loading="lazy" decoding="async"> </section> </main>  <main class="flex flex-col items-center w-full max-h-80 gap-12 p-20 mb-8 md:flex-row md:mb-0 flex-between"> <section class="bg-greige w-96 mx-auto rounded-xl p-4 shadow-2xl"> <p class="text-neutral-900 font-semibold"> <span class="text-lg font-bold text-green-700"> “</span> Muy buen instituto, la mejor profe se encuentra aquí <span class="text-lg font-bold text-green-700"> ”</span> </p> <div class="flex items-center mt-4"> <div class="flex flex-col justify-between ml-2"> <div class="flex items-center mt-1"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 1792 1792"> <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path> </svg> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 1792 1792"> <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path> </svg> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 1792 1792"> <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path> </svg> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 1792 1792"> <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path> </svg> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 1792 1792"> <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path> </svg> </div> <span class="py-1 text-sm font-semibold text-darkgreen"> Valentín B </span> </div> </div> </section><section class="bg-greige w-96 mx-auto rounded-xl p-4 shadow-2xl"> <p class="text-neutral-900 font-semibold"> <span class="text-lg font-bold text-green-700"> “</span> Tremendo lugar donde pude aprender un idioma que me costaba mucho <span class="text-lg font-bold text-green-700"> ”</span> </p> <div class="flex items-center mt-4"> <div class="flex flex-col justify-between ml-2"> <div class="flex items-center mt-1"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 1792 1792"> <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path> </svg> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 1792 1792"> <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path> </svg> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 1792 1792"> <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path> </svg> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 1792 1792"> <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path> </svg> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 1792 1792"> <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path> </svg> </div> <span class="py-1 text-sm font-semibold text-darkgreen"> Sebastian P </span> </div> </div> </section><section class="bg-greige w-96 mx-auto rounded-xl p-4 shadow-2xl"> <p class="text-neutral-900 font-semibold"> <span class="text-lg font-bold text-green-700"> “</span> Di el PET y no me arrepiento de nada, espero que el FIRST sea fácil <span class="text-lg font-bold text-green-700"> ”</span> </p> <div class="flex items-center mt-4"> <div class="flex flex-col justify-between ml-2"> <div class="flex items-center mt-1"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 1792 1792"> <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path> </svg> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 1792 1792"> <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path> </svg> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 1792 1792"> <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path> </svg> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 1792 1792"> <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path> </svg> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 1792 1792"> <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path> </svg> </div> <span class="py-1 text-sm font-semibold text-darkgreen"> Rocio R </span> </div> </div> </section><section class="bg-greige w-96 mx-auto rounded-xl p-4 shadow-2xl"> <p class="text-neutral-900 font-semibold"> <span class="text-lg font-bold text-green-700"> “</span> Me encantó haber estudiado en esta academia que me preparo al mundo <span class="text-lg font-bold text-green-700"> ”</span> </p> <div class="flex items-center mt-4"> <div class="flex flex-col justify-between ml-2"> <div class="flex items-center mt-1"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 1792 1792"> <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path> </svg> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 1792 1792"> <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path> </svg> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 1792 1792"> <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path> </svg> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 1792 1792"> <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path> </svg> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 1792 1792"> <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path> </svg> </div> <span class="py-1 text-sm font-semibold text-darkgreen"> Renzo F </span> </div> </div> </section> </main> <form class="w-full my-20 max-w-md lg:max-w-lg m-auto space-x-3" id="contact" target="_blank" action="https://formsubmit.co/emailDePersonalize.com" method="POST"> <div class="w-full max-w-2xl px-5 py-10 m-auto mt-10 bg-darkgreen shadow-2xl "> <div class="mb-6 text-3xl text-center font-semibold text-gray-100">
-Comunícate con nosotros
-</div> <div class="grid max-w-xl grid-cols-2 gap-4 m-auto"> <div class="col-span-2 lg:col-span-1"> <div class="relative"> <input type="text" id="contact-form-name" class="rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-neutral-100 text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent" placeholder="Nombre" required> </div> </div> <div class="col-span-2 lg:col-span-1"> <div class="relative"> <input type="email" id="contact-form-email" class="rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-neutral-100 text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent" placeholder="Email" required> </div> </div> <div class="col-span-2"> <textarea class="flex-1 w-full px-4 py-2 text-base text-gray-700 bg-neutral-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-800 placeholder-gray-400" id="comment" name="comment" rows="5" cols="40" required spellcheck="true" placeholder="Hace tu consulta acá">                </textarea> </div> <div class="col-span-2 text-right"> <button type="submit" class="px-4 py-2 text-neutral-100 uppercase bg-red-600 border-2 border-transparent rounded-lg text-md hover:bg-red-700 hover: duration-300 ease-out shadow-xl font-semibold w-full">
-Enviar
-</button> </div> </div> </div> </form> <footer class="bg-gradient-to-b bg-darkgreen  w-full py-20" id="footer"> <div class="max-w-screen-xl px-4 mx-auto"> <div class="pt-8 flex max-w-xs mx-auto items-center justify-between"> <a href="#" class="text-gray-100 transition-colors duration-200 hover:text-white"> <svg width="20" height="20" fill="currentColor" class="text-xl transition-colors duration-200 hover:text-white" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"> <path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z"></path> </svg> </a> <a href="#" class="text-gray-100 transition-colors duration-200 hover:text-white"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248a4.623 4.623 0 0 0 0-9.248m0 7.627a3.004 3.004 0 1 1 0-6.008a3.004 3.004 0 0 1 0 6.008"></path><circle cx="16.806" cy="7.207" r="1.078" fill="currentColor"></circle><path fill="currentColor" d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42a4.6 4.6 0 0 0-2.633 2.632a6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71c0 2.442 0 2.753.056 3.71c.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632a6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419a4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186c.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217m-1.218 9.532a5.043 5.043 0 0 1-.311 1.688a2.987 2.987 0 0 1-1.712 1.711a4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055c-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311a2.985 2.985 0 0 1-1.719-1.711a5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654c0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311a2.991 2.991 0 0 1 1.712 1.712a5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655c0 2.436 0 2.698-.043 3.654z"></path></svg> </a> <a href="#" class="text-gray-100 transition-colors duration-200 hover:text-white"> <svg width="20" height="20" fill="currentColor" class="text-xl transition-colors duration-200 hover:text-white" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"> <path d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z"></path> </svg> </a> </div> <div class="text-center pt-10 sm:pt-12 items-center justify-center text-gray-100 text-xl font-semibold"> <p>Dirección: Av. Dr. Enrique Pouey 604, Las Piedras, Canelones</p> <div class="inline-flex gap-10 pt-2"> <p class="flex"><svg xmlns="http://www.w3.org/2000/svg" class="relative" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 16.42v3.536a1 1 0 0 1-.93.998c-.437.03-.794.046-1.07.046c-8.837 0-16-7.163-16-16c0-.276.015-.633.046-1.07A1 1 0 0 1 4.044 3H7.58a.5.5 0 0 1 .498.45c.023.23.044.413.064.552A13.901 13.901 0 0 0 9.35 8.003c.095.2.033.439-.147.567l-2.158 1.542a13.047 13.047 0 0 0 6.844 6.844l1.54-2.154a.462.462 0 0 1 .573-.149a13.897 13.897 0 0 0 4 1.205c.139.02.322.041.55.064a.5.5 0 0 1 .449.498"></path></svg>2366 0662</p> <p class="flex"><svg xmlns="http://www.w3.org/2000/svg" class="relative" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M18.403 5.633A8.919 8.919 0 0 0 12.053 3c-4.948 0-8.976 4.027-8.978 8.977c0 1.582.413 3.126 1.198 4.488L3 21.116l4.759-1.249a8.981 8.981 0 0 0 4.29 1.093h.004c4.947 0 8.975-4.027 8.977-8.977a8.926 8.926 0 0 0-2.627-6.35m-6.35 13.812h-.003a7.446 7.446 0 0 1-3.798-1.041l-.272-.162l-2.824.741l.753-2.753l-.177-.282a7.448 7.448 0 0 1-1.141-3.971c.002-4.114 3.349-7.461 7.465-7.461a7.413 7.413 0 0 1 5.275 2.188a7.42 7.42 0 0 1 2.183 5.279c-.002 4.114-3.349 7.462-7.461 7.462m4.093-5.589c-.225-.113-1.327-.655-1.533-.73c-.205-.075-.354-.112-.504.112s-.58.729-.711.879s-.262.168-.486.056s-.947-.349-1.804-1.113c-.667-.595-1.117-1.329-1.248-1.554s-.014-.346.099-.458c.101-.1.224-.262.336-.393c.112-.131.149-.224.224-.374s.038-.281-.019-.393c-.056-.113-.505-1.217-.692-1.666c-.181-.435-.366-.377-.504-.383a9.65 9.65 0 0 0-.429-.008a.826.826 0 0 0-.599.28c-.206.225-.785.767-.785 1.871s.804 2.171.916 2.321c.112.15 1.582 2.415 3.832 3.387c.536.231.954.369 1.279.473c.537.171 1.026.146 1.413.089c.431-.064 1.327-.542 1.514-1.066c.187-.524.187-.973.131-1.067c-.056-.094-.207-.151-.43-.263" clip-rule="evenodd"></path></svg>092 666 667</p> <p class="flex"><svg xmlns="http://www.w3.org/2000/svg" class="relative" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M18.403 5.633A8.919 8.919 0 0 0 12.053 3c-4.948 0-8.976 4.027-8.978 8.977c0 1.582.413 3.126 1.198 4.488L3 21.116l4.759-1.249a8.981 8.981 0 0 0 4.29 1.093h.004c4.947 0 8.975-4.027 8.977-8.977a8.926 8.926 0 0 0-2.627-6.35m-6.35 13.812h-.003a7.446 7.446 0 0 1-3.798-1.041l-.272-.162l-2.824.741l.753-2.753l-.177-.282a7.448 7.448 0 0 1-1.141-3.971c.002-4.114 3.349-7.461 7.465-7.461a7.413 7.413 0 0 1 5.275 2.188a7.42 7.42 0 0 1 2.183 5.279c-.002 4.114-3.349 7.462-7.461 7.462m4.093-5.589c-.225-.113-1.327-.655-1.533-.73c-.205-.075-.354-.112-.504.112s-.58.729-.711.879s-.262.168-.486.056s-.947-.349-1.804-1.113c-.667-.595-1.117-1.329-1.248-1.554s-.014-.346.099-.458c.101-.1.224-.262.336-.393c.112-.131.149-.224.224-.374s.038-.281-.019-.393c-.056-.113-.505-1.217-.692-1.666c-.181-.435-.366-.377-.504-.383a9.65 9.65 0 0 0-.429-.008a.826.826 0 0 0-.599.28c-.206.225-.785.767-.785 1.871s.804 2.171.916 2.321c.112.15 1.582 2.415 3.832 3.387c.536.231.954.369 1.279.473c.537.171 1.026.146 1.413.089c.431-.064 1.327-.542 1.514-1.066c.187-.524.187-.973.131-1.067c-.056-.094-.207-.151-.43-.263" clip-rule="evenodd"></path></svg>099 177 174</p> </div> </div> <div class="text-center text-gray-100 pt-10 sm:pt-12 font-light flex items-center justify-center">
-Created by The Arisen
-</div> </div> </footer>  </body></html>
+    "></div>
+  </header>
+  <header data-astro-cid-7vszemnk> <img src="assets/hero.r4OyZbOg_Z2eXqHD.webp" alt="Instituto Personalize English"
+      class="m-auto absolute shadow-2xl h-screen lg:h-auto" data-astro-cid-7vszemnk width="1819" height="1024"
+      loading="lazy" decoding="async"> </header>
+  <section class="relative z-20 flex items-center overflow-hidden lg:h-screen from-darkgreen bg-gradient-to-t"
+    data-astro-cid-7vszemnk>
+    <div class="container relative flex pl-6 py-16 mx-auto" data-astro-cid-7vszemnk>
+      <div class="relative z-20 flex flex-col sm:w-2/3 lg:w-2/5 animate__animated animate__fadeInLeft pt-20 select-none"
+        data-astro-cid-7vszemnk>
+        <h1 class="flex text-6xl font-black leading-none text-gray-900 uppercase lg:text-8xl italic"
+          data-astro-cid-7vszemnk>
+          Personal <span class="text-red-500" data-astro-cid-7vszemnk>i</span> ze
+        </h1> <span class="md:text-6xl text-4xl font-black uppercase text-neutral-200" data-astro-cid-7vszemnk>tu
+          mundo</span>
+        <p class="text-xl text-neutral-200 pt-10 font-semibold font" data-astro-cid-7vszemnk>
+          ¡Reinventate! Estudiá un nuevo idioma, abrí las puertas
+          a nuevos horizontes y a todo lo que siempre deseaste.
+        </p>
+        <div class="flex mt-8 animate__animated animate__fadeIn animate__delay-1s" data-astro-cid-7vszemnk> <a
+            href="#contact"
+            class="px-4 py-2 mr-4 text-neutral-100 uppercase bg-red-600 border-2 border-transparent rounded-lg text-md hover:bg-red-700 hover: duration-300 ease-out shadow-xl"
+            data-astro-cid-7vszemnk>
+            Comenzar
+          </a> <a href="#aboutus"
+            class="px-4 py-2 uppercase bg-transparent border-2 rounded-lg hover:bg-red-700 text-md text-white duration-300 ease-out shadow-xl"
+            data-astro-cid-7vszemnk>
+            Leer mas
+          </a> </div>
+      </div>
+    </div>
+  </section>
+  <div class="relative p-20 pt-40 bg-gradient-to-b from-darkgreen to-lightgreen" id="aboutus">
+    <div class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-12 lg:items-center">
+      <div class="lg:col-start-2 md:p-20 wrap pb-16">
+        <h4
+          class="text-3xl font-extrabold leading-8 tracking-tight text-gray-900 dark:text-white sm:leading-9 text-center md:text-left">
+          Alcanzá todo eso que estás buscando
+        </h4>
+        <ul class="mt-10">
+          <li class="mt-10">
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <div
+                  class="flex items-center justify-center w-12 h-12 text-white bg-lightergreen rounded-md border-2 border-greige shadow-xl">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5">
+                    </path>
+                  </svg> </div>
+              </div>
+              <div class="ml-4">
+                <h5 class="font-semibold leading-6 text-white text-2xl"> Un Mejor Desempeño Laboral </h5>
+                <p class=" text-lg mt-2  leading-6 text-gray-200"> El inglés no solo te abre puertas, sino que impulsa
+                  tu desempeño y desarrollo profesional. Abraza oportunidades que te lleven más alto en tu carrera. </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="mt-10">
+          <li class="mt-10">
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <div
+                  class="flex items-center justify-center w-12 h-12 text-white bg-lightergreen rounded-md border-2 border-greige shadow-xl">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5">
+                    </path>
+                  </svg> </div>
+              </div>
+              <div class="ml-4">
+                <h5 class="font-semibold leading-6 text-white text-2xl"> Una Comunicación Sin Barreras </h5>
+                <p class=" text-lg mt-2  leading-6 text-gray-200"> Hablar inglés te brinda la habilidad de comunicarte
+                  sin restricciones. Desde presentaciones empresariales hasta conexiones personales, el inglés te
+                  empodera para expresar ideas y construir relaciones de manera efectiva. </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="mt-10">
+          <li class="mt-10">
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <div
+                  class="flex items-center justify-center w-12 h-12 text-white bg-lightergreen rounded-md border-2 border-greige shadow-xl">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5">
+                    </path>
+                  </svg> </div>
+              </div>
+              <div class="ml-4">
+                <h5 class="font-semibold leading-6 text-white text-2xl"> Mayor Crecimiento Personal y Confianza </h5>
+                <p class=" text-lg mt-2  leading-6 text-gray-200"> Aprender inglés no solo es adquirir habilidades
+                  lingüísticas, sino también una herramienta para el crecimiento personal. La confianza que obtienes al
+                  expresarte en un idioma global te impulsa en todos los aspectos de la vida. </p>
+              </div>
+            </div>
+          </li>
+        </ul> <a href="#contact"
+          class="px-4 py-2 absolute m-5 ml-16  text-neutral-100 uppercase bg-red-600 border-2 border-transparent rounded-lg text-md hover:bg-red-700 hover: duration-300 ease-out shadow-xl">
+          Empezá ahora
+        </a>
+      </div>
+      <section class="relative mt-10 m-auto lg:mt-0 max-w-lg " data-astro-cid-tdmieydy> <img
+          src="assets/classroom.HQ73DqxZ_Z10hDKG.webp" alt="clase de ingles"
+          class="relative mx-auto rounded-3xl shadow-2xl duration-300 ease-out slideshow fade image border-2 border-darkgreen"
+          data-astro-cid-tdmieydy width="500" height="750" loading="lazy" decoding="async"> <img
+          src="assets/classroom2.rLYWLSXi_ZB6u0g.webp" alt="clase de ingles"
+          class="relative mx-auto rounded-3xl shadow-2xl duration-300 ease-out slideshow fade image border-2 border-darkgreen"
+          data-astro-cid-tdmieydy width="500" height="750" loading="lazy" decoding="async"> <img
+          src="assets/classroom3.ElLg2_mJ_Z2bvF6D.webp" alt="clase de ingles"
+          class="relative mx-auto rounded-3xl shadow-2xl duration-300 ease-out slideshow fade image border-2 border-darkgreen"
+          data-astro-cid-tdmieydy width="500" height="750" loading="lazy" decoding="async"> <img
+          src="assets/classroom4.HDOe9c6U_Z2ihNkz.webp" alt="clase de ingles"
+          class="relative mx-auto rounded-3xl shadow-2xl duration-300 ease-out slideshow fade image border-2 border-darkgreen"
+          data-astro-cid-tdmieydy width="500" height="750" loading="lazy" decoding="async"> </section>
+    </div>
+  </div>
+  <main class="container mx-auto w-full lg:my-10" data-astro-cid-z44pupvl>
+    <div class="relative wrap overflow-hidden p-10 h-full" data-astro-cid-z44pupvl>
+      <div class="border-2-2 absolute border-greige h-full border" style="left: 50%" data-astro-cid-z44pupvl></div>
+      <!-- right timeline -->
+      <section class="mb-8 flex justify-between items-center w-full right-timeline" data-astro-cid-z44pupvl>
+        <div class="order-1 w-5/12" data-astro-cid-z44pupvl></div>
+        <div class="z-20 flex items-center order-1 bg-green-900 border-2 border-greige shadow-xl w-8 h-8 rounded-full"
+          data-astro-cid-z44pupvl></div>
+        <div class="order-1 bg-darkgreen rounded-lg shadow-xl w-5/12 px-6 py-4" data-astro-cid-z44pupvl>
+          <h3 class="mb-3 font-semibold text-white text-2xl" data-astro-cid-z44pupvl>Fundamentos Sólidos en Nuestros
+            Cursos Básicos</h3>
+          <p class="text-base font-medium leading-snug tracking-wide  text-neutral-100" data-astro-cid-z44pupvl>
+            Sumérgete en los conceptos esenciales del inglés con nuestros cursos básicos. Desde la gramática hasta el
+            vocabulario, te ofrecemos una introducción completa para construir una base sólida.
+          </p>
+        </div>
+      </section> <!-- left timeline -->
+      <section class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
+        data-astro-cid-z44pupvl>
+        <div class="order-1 w-5/12" data-astro-cid-z44pupvl></div>
+        <div class="z-20 flex items-center order-1 bg-green-900 border-2 border-greige shadow-xl w-8 h-8 rounded-full"
+          data-astro-cid-z44pupvl></div>
+        <div class="order-1 bg-green-800 rounded-lg shadow-xl w-5/12 px-6 py-4" data-astro-cid-z44pupvl>
+          <h3 class="mb-3 font-semibold text-white text-2xl" data-astro-cid-z44pupvl>Avanza con Nuestros Cursos
+            Intermedios</h3>
+          <p class="text-base font-medium leading-snug t racking-wide text-white" data-astro-cid-z44pupvl>
+            Desarrolla confianza en tu comunicación con nuestros cursos intermedios. Perfecciona tu gramática, amplía tu
+            vocabulario y mejora tus habilidades conversacionales para manejarte eficientemente en situaciones
+            cotidianas.
+          </p>
+        </div>
+      </section> <!-- right timeline -->
+      <section class="mb-8 flex justify-between items-center w-full right-timeline" data-astro-cid-z44pupvl>
+        <div class="order-1 w-5/12" data-astro-cid-z44pupvl></div>
+        <div class="z-20 flex items-center order-1 bg-green-900 border-2 border-greige shadow-xl w-8 h-8 rounded-full"
+          data-astro-cid-z44pupvl></div>
+        <div class="order-1 bg-darkgreen rounded-lg shadow-xl w-5/12 px-6 py-4" data-astro-cid-z44pupvl>
+          <h3 class="mb-3 font-semibold text-white text-2xl" data-astro-cid-z44pupvl>Domina el Inglés Avanzado</h3>
+          <p class="text-base font-medium leading-snug tracking-wide  text-neutral-100" data-astro-cid-z44pupvl>
+            Da el siguiente paso hacia la fluidez con nuestros cursos avanzados. Trabaja en sutilezas lingüísticas,
+            comprensión avanzada y participa en discusiones más complejas para alcanzar un nivel de competencia más
+            alto.
+          </p>
+        </div>
+      </section> <!-- left timeline -->
+      <section class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
+        data-astro-cid-z44pupvl>
+        <div class="order-1 w-5/12" data-astro-cid-z44pupvl></div>
+        <div class="z-20 flex items-center order-1 bg-green-900 border-2 border-greige shadow-xl w-8 h-8 rounded-full"
+          data-astro-cid-z44pupvl></div>
+        <div class="order-1 bg-green-800 rounded-lg shadow-xl w-5/12 px-6 py-4" data-astro-cid-z44pupvl>
+          <h3 class="mb-3 font-semibold text-white text-2xl" data-astro-cid-z44pupvl>Preparación Exitosa para Exámenes
+            Internacionales</h3>
+          <p class="text-base font-medium leading-snug t racking-wide text-white" data-astro-cid-z44pupvl>
+            Nuestra programación de preparación para exámenes te equipa con las habilidades necesarias para superar tu
+            primer examen internacional. Ya sea de Cambridge, Michigan u otro, te preparamos para destacar y abrir
+            puertas a nuevas oportunidades educativas y profesionales. ¡Tu éxito internacional comienza con nosotros!
+          </p>
+        </div>
+      </section>
+    </div>
+  </main>
+  <div class="flex-wrap items-center justify-center gap-8 text-center sm:flex py-10 m-20 rounded-xl">
+    <div
+      class="w-full px-4 py-4 mt-6 rounded-xl sm:w-1/2 md:w-1/2 lg:w-1/4 even:lg:mt-24 bg-darkgreen border-4 border-greige shadow-xl ">
+      <div class="flex-shrink-0">
+        <div class="flex items-center justify-center w-12 h-12 mx-auto text-white bg-lightergreen rounded-md"> <svg
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5">
+            </path>
+          </svg> </div>
+      </div>
+      <h3 class="py-4 text-3xl font-semibold text-neutral-100 sm:text-xl"> Examen de nivelación GRATIS </h3>
+      <p class="py-4 text-neutral-100 text-xl"> Descubre tu nivel de inglés con nuestra prueba gratuita. ¡Encuentra el
+        curso perfecto que mejor se adapta a ti! </p>
+    </div>
+    <div
+      class="w-full px-4 py-4 mt-6 rounded-xl sm:w-1/2 md:w-1/2 lg:w-1/4 even:lg:mt-24 bg-darkgreen border-4 border-greige shadow-xl ">
+      <div class="flex-shrink-0">
+        <div class="flex items-center justify-center w-12 h-12 mx-auto text-white bg-lightergreen rounded-md"> <svg
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5">
+            </path>
+          </svg> </div>
+      </div>
+      <h3 class="py-4 text-3xl font-semibold text-neutral-100 sm:text-xl"> Flexibilidad horaria </h3>
+      <p class="py-4 text-neutral-100 text-xl"> Adapta las clases a tu vida ocupada y descubre la libertad de aprender
+        cuando más te convenga. ¡Haz del inglés parte de tu vida cotidiana! </p>
+    </div>
+    <div
+      class="w-full px-4 py-4 mt-6 rounded-xl sm:w-1/2 md:w-1/2 lg:w-1/4 even:lg:mt-24 bg-darkgreen border-4 border-greige shadow-xl ">
+      <div class="flex-shrink-0">
+        <div class="flex items-center justify-center w-12 h-12 mx-auto text-white bg-lightergreen rounded-md"> <svg
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5">
+            </path>
+          </svg> </div>
+      </div>
+      <h3 class="py-4 text-3xl font-semibold text-neutral-100 sm:text-xl"> Grupos reducidos </h3>
+      <p class="py-4 text-neutral-100 text-xl"> Descubre el aprendizaje auténtico en clases íntimas. Aquí, no solo
+        aprendes, ¡creas conexiones significativas en cada clase! </p>
+    </div>
+  </div>
+  <main class="mt-20 py-10" id="carrousel" data-astro-cid-n3tzmrzb>
+    <h2 class="text-neutral-100 text-6xl text-center font" data-astro-cid-n3tzmrzb>
+      Nuestras instalaciones
+    </h2>
+    <section class="carrousel p-10 flex flex-nowrap overflow-x-auto gap-5" data-astro-cid-n3tzmrzb> <img
+        src="assets/img1.nBGHly7__Z1Ebk25.webp" alt="Salones de Personalize English"
+        class="w-80 h-80 hover:scale-105 duration-500 rounded-md ring-1 ring-gray-400" data-astro-cid-n3tzmrzb
+        width="320" height="320" loading="lazy" decoding="async"> <img src="assets/img2.SU5wnaul_ZvuxTp.webp"
+        alt="Salones de Personalize English"
+        class="w-80 h-80 hover:scale-105 duration-500 rounded-md ring-1 ring-gray-400" data-astro-cid-n3tzmrzb
+        width="320" height="320" loading="lazy" decoding="async"> <img src="assets/img3.JkHo7wY5_Zkc8qd.webp"
+        alt="Salones de Personalize English"
+        class="w-80 h-80 hover:scale-105 duration-500 rounded-md ring-1 ring-gray-400" data-astro-cid-n3tzmrzb
+        width="320" height="320" loading="lazy" decoding="async"> <img src="assets/img4.zzCQC0Mo_Z26sgIT.webp"
+        alt="Salones de Personalize English"
+        class="w-80 h-80 hover:scale-105 duration-500 rounded-md ring-1 ring-gray-400" data-astro-cid-n3tzmrzb
+        width="320" height="320" loading="lazy" decoding="async"> <img src="assets/img5.8mfg2Ggm_Z2vGLOS.webp"
+        alt="Salones de Personalize English"
+        class="w-80 h-80 hover:scale-105 duration-500 rounded-md ring-1 ring-gray-400" data-astro-cid-n3tzmrzb
+        width="320" height="320" loading="lazy" decoding="async"> <img src="assets/img6.KDcUklPU_1SmOHd.webp"
+        alt="Salones de Personalize English"
+        class="w-80 h-80 hover:scale-105 duration-500 rounded-md ring-1 ring-gray-400" data-astro-cid-n3tzmrzb
+        width="320" height="320" loading="lazy" decoding="async"> <img src="assets/img7.azclph_x_ZEXqcJ.webp"
+        alt="Salones de Personalize English"
+        class="w-80 h-80 hover:scale-105 duration-500 rounded-md ring-1 ring-gray-400" data-astro-cid-n3tzmrzb
+        width="320" height="320" loading="lazy" decoding="async"> <img src="assets/img8.lVOGX5ZU_UYUPR.webp"
+        alt="Salones de Personalize English"
+        class="w-80 h-80 hover:scale-105 duration-500 rounded-md ring-1 ring-gray-400" data-astro-cid-n3tzmrzb
+        width="320" height="320" loading="lazy" decoding="async"> <img src="assets/img9.K0rf8_Y7_1HP5Sz.webp"
+        alt="Salones de Personalize English"
+        class="w-80 h-80 hover:scale-105 duration-500 rounded-md ring-1 ring-gray-400" data-astro-cid-n3tzmrzb
+        width="320" height="320" loading="lazy" decoding="async"> </section>
+  </main>
+  <main class="flex flex-col items-center w-full max-h-80 gap-12 p-20 mb-8 md:flex-row md:mb-0 flex-between">
+    <section class="bg-greige w-96 mx-auto rounded-xl p-4 shadow-2xl">
+      <p class="text-neutral-900 font-semibold"> <span class="text-lg font-bold text-green-700"> “</span> Muy buen
+        instituto, la mejor profe se encuentra aquí <span class="text-lg font-bold text-green-700"> ”</span> </p>
+      <div class="flex items-center mt-4">
+        <div class="flex flex-col justify-between ml-2">
+          <div class="flex items-center mt-1"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+              class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 1792 1792">
+              <path
+                d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z">
+              </path>
+            </svg> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500"
+              fill="currentColor" viewBox="0 0 1792 1792">
+              <path
+                d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z">
+              </path>
+            </svg> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500"
+              fill="currentColor" viewBox="0 0 1792 1792">
+              <path
+                d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z">
+              </path>
+            </svg> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500"
+              fill="currentColor" viewBox="0 0 1792 1792">
+              <path
+                d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z">
+              </path>
+            </svg> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500"
+              fill="currentColor" viewBox="0 0 1792 1792">
+              <path
+                d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z">
+              </path>
+            </svg> </div> <span class="py-1 text-sm font-semibold text-darkgreen"> Valentín B </span>
+        </div>
+      </div>
+    </section>
+    <section class="bg-greige w-96 mx-auto rounded-xl p-4 shadow-2xl">
+      <p class="text-neutral-900 font-semibold"> <span class="text-lg font-bold text-green-700"> “</span> Tremendo lugar
+        donde pude aprender un idioma que me costaba mucho <span class="text-lg font-bold text-green-700"> ”</span> </p>
+      <div class="flex items-center mt-4">
+        <div class="flex flex-col justify-between ml-2">
+          <div class="flex items-center mt-1"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+              class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 1792 1792">
+              <path
+                d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z">
+              </path>
+            </svg> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500"
+              fill="currentColor" viewBox="0 0 1792 1792">
+              <path
+                d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z">
+              </path>
+            </svg> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500"
+              fill="currentColor" viewBox="0 0 1792 1792">
+              <path
+                d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z">
+              </path>
+            </svg> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500"
+              fill="currentColor" viewBox="0 0 1792 1792">
+              <path
+                d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z">
+              </path>
+            </svg> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500"
+              fill="currentColor" viewBox="0 0 1792 1792">
+              <path
+                d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z">
+              </path>
+            </svg> </div> <span class="py-1 text-sm font-semibold text-darkgreen"> Sebastian P </span>
+        </div>
+      </div>
+    </section>
+    <section class="bg-greige w-96 mx-auto rounded-xl p-4 shadow-2xl">
+      <p class="text-neutral-900 font-semibold"> <span class="text-lg font-bold text-green-700"> “</span> Di el PET y no
+        me arrepiento de nada, espero que el FIRST sea fácil <span class="text-lg font-bold text-green-700"> ”</span>
+      </p>
+      <div class="flex items-center mt-4">
+        <div class="flex flex-col justify-between ml-2">
+          <div class="flex items-center mt-1"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+              class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 1792 1792">
+              <path
+                d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z">
+              </path>
+            </svg> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500"
+              fill="currentColor" viewBox="0 0 1792 1792">
+              <path
+                d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z">
+              </path>
+            </svg> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500"
+              fill="currentColor" viewBox="0 0 1792 1792">
+              <path
+                d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z">
+              </path>
+            </svg> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500"
+              fill="currentColor" viewBox="0 0 1792 1792">
+              <path
+                d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z">
+              </path>
+            </svg> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500"
+              fill="currentColor" viewBox="0 0 1792 1792">
+              <path
+                d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z">
+              </path>
+            </svg> </div> <span class="py-1 text-sm font-semibold text-darkgreen"> Rocio R </span>
+        </div>
+      </div>
+    </section>
+    <section class="bg-greige w-96 mx-auto rounded-xl p-4 shadow-2xl">
+      <p class="text-neutral-900 font-semibold"> <span class="text-lg font-bold text-green-700"> “</span> Me encantó
+        haber estudiado en esta academia que me preparo al mundo <span class="text-lg font-bold text-green-700">
+          ”</span> </p>
+      <div class="flex items-center mt-4">
+        <div class="flex flex-col justify-between ml-2">
+          <div class="flex items-center mt-1"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+              class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 1792 1792">
+              <path
+                d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z">
+              </path>
+            </svg> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500"
+              fill="currentColor" viewBox="0 0 1792 1792">
+              <path
+                d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z">
+              </path>
+            </svg> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500"
+              fill="currentColor" viewBox="0 0 1792 1792">
+              <path
+                d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z">
+              </path>
+            </svg> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500"
+              fill="currentColor" viewBox="0 0 1792 1792">
+              <path
+                d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z">
+              </path>
+            </svg> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="w-4 h-4 text-yellow-500"
+              fill="currentColor" viewBox="0 0 1792 1792">
+              <path
+                d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z">
+              </path>
+            </svg> </div> <span class="py-1 text-sm font-semibold text-darkgreen"> Renzo F </span>
+        </div>
+      </div>
+    </section>
+  </main>
+  <form class="w-full my-20 max-w-md lg:max-w-lg m-auto space-x-3" id="contact" target="_blank"
+    action="https://formsubmit.co/emailDePersonalize.com" method="POST">
+    <div class="w-full max-w-2xl px-5 py-10 m-auto mt-10 bg-darkgreen shadow-2xl ">
+      <div class="mb-6 text-3xl text-center font-semibold text-gray-100">
+        Comunícate con nosotros
+      </div>
+      <div class="grid max-w-xl grid-cols-2 gap-4 m-auto">
+        <div class="col-span-2 lg:col-span-1">
+          <div class="relative"> <input type="text" id="contact-form-name"
+              class="rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-neutral-100 text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent"
+              placeholder="Nombre" required> </div>
+        </div>
+        <div class="col-span-2 lg:col-span-1">
+          <div class="relative"> <input type="email" id="contact-form-email"
+              class="rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-neutral-100 text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent"
+              placeholder="Email" required> </div>
+        </div>
+        <div class="col-span-2"> <textarea
+            class="flex-1 w-full px-4 py-2 text-base text-gray-700 bg-neutral-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-800 placeholder-gray-400"
+            id="comment" name="comment" rows="5" cols="40" required spellcheck="true"
+            placeholder="Hace tu consulta acá">                </textarea> </div>
+        <div class="col-span-2 text-right"> <button type="submit"
+            class="px-4 py-2 text-neutral-100 uppercase bg-red-600 border-2 border-transparent rounded-lg text-md hover:bg-red-700 hover: duration-300 ease-out shadow-xl font-semibold w-full">
+            Enviar
+          </button> </div>
+      </div>
+    </div>
+  </form>
+  <footer class="bg-gradient-to-b bg-darkgreen  w-full py-20" id="footer">
+    <div class="max-w-screen-xl px-4 mx-auto">
+      <div class="pt-8 flex max-w-xs mx-auto items-center justify-between"> <a href="#"
+          class="text-gray-100 transition-colors duration-200 hover:text-white"> <svg width="20" height="20"
+            fill="currentColor" class="text-xl transition-colors duration-200 hover:text-white" viewBox="0 0 1792 1792"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z">
+            </path>
+          </svg> </a> <a href="#" class="text-gray-100 transition-colors duration-200 hover:text-white"> <svg
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248a4.623 4.623 0 0 0 0-9.248m0 7.627a3.004 3.004 0 1 1 0-6.008a3.004 3.004 0 0 1 0 6.008">
+            </path>
+            <circle cx="16.806" cy="7.207" r="1.078" fill="currentColor"></circle>
+            <path fill="currentColor"
+              d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42a4.6 4.6 0 0 0-2.633 2.632a6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71c0 2.442 0 2.753.056 3.71c.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632a6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419a4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186c.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217m-1.218 9.532a5.043 5.043 0 0 1-.311 1.688a2.987 2.987 0 0 1-1.712 1.711a4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055c-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311a2.985 2.985 0 0 1-1.719-1.711a5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654c0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311a2.991 2.991 0 0 1 1.712 1.712a5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655c0 2.436 0 2.698-.043 3.654z">
+            </path>
+          </svg> </a> <a href="#" class="text-gray-100 transition-colors duration-200 hover:text-white"> <svg width="20"
+            height="20" fill="currentColor" class="text-xl transition-colors duration-200 hover:text-white"
+            viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z">
+            </path>
+          </svg> </a> </div>
+      <div class="text-center pt-10 sm:pt-12 items-center justify-center text-gray-100 text-xl font-semibold">
+        <p>Dirección: Av. Dr. Enrique Pouey 604, Las Piedras, Canelones</p>
+        <div class="inline-flex gap-10 pt-2">
+          <p class="flex"><svg xmlns="http://www.w3.org/2000/svg" class="relative" width="32" height="32"
+              viewBox="0 0 24 24">
+              <path fill="currentColor"
+                d="M21 16.42v3.536a1 1 0 0 1-.93.998c-.437.03-.794.046-1.07.046c-8.837 0-16-7.163-16-16c0-.276.015-.633.046-1.07A1 1 0 0 1 4.044 3H7.58a.5.5 0 0 1 .498.45c.023.23.044.413.064.552A13.901 13.901 0 0 0 9.35 8.003c.095.2.033.439-.147.567l-2.158 1.542a13.047 13.047 0 0 0 6.844 6.844l1.54-2.154a.462.462 0 0 1 .573-.149a13.897 13.897 0 0 0 4 1.205c.139.02.322.041.55.064a.5.5 0 0 1 .449.498">
+              </path>
+            </svg>2366 0662</p>
+          <p class="flex"><svg xmlns="http://www.w3.org/2000/svg" class="relative" width="32" height="32"
+              viewBox="0 0 24 24">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M18.403 5.633A8.919 8.919 0 0 0 12.053 3c-4.948 0-8.976 4.027-8.978 8.977c0 1.582.413 3.126 1.198 4.488L3 21.116l4.759-1.249a8.981 8.981 0 0 0 4.29 1.093h.004c4.947 0 8.975-4.027 8.977-8.977a8.926 8.926 0 0 0-2.627-6.35m-6.35 13.812h-.003a7.446 7.446 0 0 1-3.798-1.041l-.272-.162l-2.824.741l.753-2.753l-.177-.282a7.448 7.448 0 0 1-1.141-3.971c.002-4.114 3.349-7.461 7.465-7.461a7.413 7.413 0 0 1 5.275 2.188a7.42 7.42 0 0 1 2.183 5.279c-.002 4.114-3.349 7.462-7.461 7.462m4.093-5.589c-.225-.113-1.327-.655-1.533-.73c-.205-.075-.354-.112-.504.112s-.58.729-.711.879s-.262.168-.486.056s-.947-.349-1.804-1.113c-.667-.595-1.117-1.329-1.248-1.554s-.014-.346.099-.458c.101-.1.224-.262.336-.393c.112-.131.149-.224.224-.374s.038-.281-.019-.393c-.056-.113-.505-1.217-.692-1.666c-.181-.435-.366-.377-.504-.383a9.65 9.65 0 0 0-.429-.008a.826.826 0 0 0-.599.28c-.206.225-.785.767-.785 1.871s.804 2.171.916 2.321c.112.15 1.582 2.415 3.832 3.387c.536.231.954.369 1.279.473c.537.171 1.026.146 1.413.089c.431-.064 1.327-.542 1.514-1.066c.187-.524.187-.973.131-1.067c-.056-.094-.207-.151-.43-.263"
+                clip-rule="evenodd"></path>
+            </svg>092 666 667</p>
+          <p class="flex"><svg xmlns="http://www.w3.org/2000/svg" class="relative" width="32" height="32"
+              viewBox="0 0 24 24">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M18.403 5.633A8.919 8.919 0 0 0 12.053 3c-4.948 0-8.976 4.027-8.978 8.977c0 1.582.413 3.126 1.198 4.488L3 21.116l4.759-1.249a8.981 8.981 0 0 0 4.29 1.093h.004c4.947 0 8.975-4.027 8.977-8.977a8.926 8.926 0 0 0-2.627-6.35m-6.35 13.812h-.003a7.446 7.446 0 0 1-3.798-1.041l-.272-.162l-2.824.741l.753-2.753l-.177-.282a7.448 7.448 0 0 1-1.141-3.971c.002-4.114 3.349-7.461 7.465-7.461a7.413 7.413 0 0 1 5.275 2.188a7.42 7.42 0 0 1 2.183 5.279c-.002 4.114-3.349 7.462-7.461 7.462m4.093-5.589c-.225-.113-1.327-.655-1.533-.73c-.205-.075-.354-.112-.504.112s-.58.729-.711.879s-.262.168-.486.056s-.947-.349-1.804-1.113c-.667-.595-1.117-1.329-1.248-1.554s-.014-.346.099-.458c.101-.1.224-.262.336-.393c.112-.131.149-.224.224-.374s.038-.281-.019-.393c-.056-.113-.505-1.217-.692-1.666c-.181-.435-.366-.377-.504-.383a9.65 9.65 0 0 0-.429-.008a.826.826 0 0 0-.599.28c-.206.225-.785.767-.785 1.871s.804 2.171.916 2.321c.112.15 1.582 2.415 3.832 3.387c.536.231.954.369 1.279.473c.537.171 1.026.146 1.413.089c.431-.064 1.327-.542 1.514-1.066c.187-.524.187-.973.131-1.067c-.056-.094-.207-.151-.43-.263"
+                clip-rule="evenodd"></path>
+            </svg>099 177 174</p>
+        </div>
+      </div>
+      <div class="text-center text-gray-100 pt-10 sm:pt-12 font-light flex items-center justify-center">
+        Created by The Arisen
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
