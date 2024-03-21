@@ -2,8 +2,8 @@
 <html lang="en" class="scroll-smooth" data-astro-cid-w4p2pmha>
 
 <head><!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HYRF4YFZS4"></script>
-    <script>
+    <script async type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-HYRF4YFZS4"></script>
+    <script type="text/partytown">
     window.dataLayer = window.dataLayer || [];
     function gtag() {
         dataLayer.push(arguments);
@@ -95,35 +95,6 @@
             to {
                 opacity: 1;
                 translate: 0 0
-            }
-        }
-
-        @property --num {
-            syntax: "<integer>";
-            initial-value: 0;
-            inherits: false;
-        }
-
-        @property --max {
-            syntax: "<integer>";
-            inherits: false;
-        }
-
-        span[data-astro-cid-in76g7hr].counter {
-            counter-set: num var(--num);
-            animation: counter ease-in-out alternate forwards;
-            counter-reset: num var(--max);
-            animation-timeline: view();
-            animation-range: entry 10% cover 45%
-        }
-
-        span[data-astro-cid-in76g7hr].counter:after {
-            content: counter(num)
-        }
-
-        @keyframes counter {
-            to {
-                --num: calc(var(--max))
             }
         }
     </style>
@@ -302,37 +273,33 @@
             </p>
         </section>
     </main>
-    <section class="bg-darkgreen" data-astro-cid-in76g7hr>
-        <div class="container grid grid-cols-2 gap-8 py-8 mx-auto text-center md:grid-cols-4" data-astro-cid-in76g7hr>
-            <div data-astro-cid-in76g7hr>
-                <p class="text-5xl font-bold text-white" data-astro-cid-in76g7hr> <span
-                        class="inline text-white counter" style="--max:2500" data-astro-cid-in76g7hr></span> <span
-                        class="text-tom-thumb-200" data-astro-cid-in76g7hr> +</span> </p>
-                <p class="text-xs font-medium tracking-wide text-tom-thumb-100 uppercase" data-astro-cid-in76g7hr>
+    <section class="bg-darkgreen">
+        <div class="container grid grid-cols-2 gap-8 py-8 mx-auto text-center md:grid-cols-4">
+            <div>
+                <p class="text-5xl font-bold text-white"> <span class="inline text-white"></span> <span
+                        class="text-tom-thumb-200"> +2500</span> </p>
+                <p class="text-xs font-medium tracking-wide text-tom-thumb-100 uppercase">
                     Estudiantes
                 </p>
             </div>
-            <div data-astro-cid-in76g7hr>
-                <p class="text-5xl font-bold text-white" data-astro-cid-in76g7hr> <span
-                        class="inline text-white counter" style="--max:15" data-astro-cid-in76g7hr></span> <span
-                        class="text-tom-thumb-200" data-astro-cid-in76g7hr> +</span> </p>
-                <p class="text-xs font-medium tracking-wide text-tom-thumb-100 uppercase" data-astro-cid-in76g7hr>
+            <div>
+                <p class="text-5xl font-bold text-white"> <span class="inline text-white"></span> <span
+                        class="text-tom-thumb-200"> +15</span> </p>
+                <p class="text-xs font-medium tracking-wide text-tom-thumb-100 uppercase">
                     Examenes internacionales
                 </p>
             </div>
-            <div data-astro-cid-in76g7hr>
-                <p class="text-5xl font-bold text-white" data-astro-cid-in76g7hr> <span
-                        class="inline text-white counter" style="--max:98" data-astro-cid-in76g7hr></span> <span
-                        class="text-tom-thumb-200" data-astro-cid-in76g7hr> %</span> </p>
-                <p class="text-xs font-medium tracking-wide text-tom-thumb-100 uppercase" data-astro-cid-in76g7hr>
+            <div>
+                <p class="text-5xl font-bold text-white"> <span class="inline text-white"></span> <span
+                        class="text-tom-thumb-200"> 98%</span> </p>
+                <p class="text-xs font-medium tracking-wide text-tom-thumb-100 uppercase">
                     Tasa de exito
                 </p>
             </div>
-            <div data-astro-cid-in76g7hr>
-                <p class="text-5xl font-bold text-white" data-astro-cid-in76g7hr> <span
-                        class="inline text-white counter" style="--max:15" data-astro-cid-in76g7hr></span> <span
-                        class="text-tom-thumb-200" data-astro-cid-in76g7hr> +</span> </p>
-                <p class="text-xs font-medium tracking-wide text-tom-thumb-100 uppercase" data-astro-cid-in76g7hr>
+            <div>
+                <p class="text-5xl font-bold text-white"> <span class="inline text-white"></span> <span
+                        class="text-tom-thumb-200"> +15</span> </p>
+                <p class="text-xs font-medium tracking-wide text-tom-thumb-100 uppercase">
                     Años de experiencia
                 </p>
             </div>
@@ -703,9 +670,10 @@
             <div class="flex m-auto justify-center gap-5 md:gap-10 flex-wrap my-5"> <a
                     href="https://www.cambridgeenglish.org/"> <img src="./cambridge.png"
                         alt="Logo de University of Cambridge" class="h-12 my-4"> </a> <a
-                    href="https://www.chichester.ac.uk/"> <img src="./chichester.png" alt="Logo de Chichester"
-                        class="h-12 my-4"> </a> <a href="https://www.ets.org/"> <img src="./ets.svg" alt="Logo de ETS"
-                        class="h-12 my-4"> </a> <a href="https://michiganassessment.org/"> <img src="./michigan.png"
+                    href="https://www.anglia.org/exams/general-english-exams"> <img src="./Anglia.webp"
+                        alt="Logo de Chichester" class="h-12 my-4"> </a> <a href="https://www.ets.org/"> <img
+                        src="./ets.svg" alt="Logo de ETS" class="h-12 my-4"> </a> <a
+                    href="https://michiganassessment.org/"> <img src="./michigan.png"
                         alt="Logo de University of Michigan" class="h-12 my-4"> </a> <a href="https://ielts.org/"> <img
                         src="./ielts.png" alt="Logo de IELTS" class="h-10 my-4"> </a> </div>
             <hr>
