@@ -1,0 +1,1 @@
+import"./hoisted.BbDQZSCT.js";let s=0;a();function a(){let e,l=document.getElementsByClassName("slideshow"),t=document.getElementsByClassName("image");for(e=0;e<l.length;e++)l[e].style.display="none";for(s++,s>l.length&&(s=1),e=0;e<t.length;e++)t[e].className=t[e].className.replace(" active","");l[s-1].style.display="block",t[s-1].className+=" active",setTimeout(a,2e3)}
